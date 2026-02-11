@@ -132,6 +132,10 @@ input {
     font-size: 2rem;
 }
 
+.msg{
+    color: var(--text);
+}
+
 footer{
     display: flex;
     align-items: center;
