@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylsheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>EXAMEN WEB 1.1</title>
 </head>
 <body>
-    <section class="card">
-        <label for="nombre">Primer Nombre</label>
-        <input id="nombre">
-        <button type="button"> Click </button>
-        <p id="msg" class="msg" role="status" aria-live="polite"></p>
-        <ul class="log">
-
-        </ul>
-        <button type="reset"> Reiniciar </button>
-    </section>
+    <main>
+        <section class="hero">
+                <h1>EXAMEN WEB 1.1</h1>
+            </section>
+        <section class="clicks">
+            <section class="card">
+                <label for="nombre">Primer Nombre</label>
+                <input id="nombre">
+                <button id="click" type="button" class="btn"> Click </button>
+                <p id="msg" class="msg" role="status" aria-live="polite"></p>
+                <ul id="items" aria-label="Lista de items"></ul>
+                <button type="reset" class="btn"> Reiniciar </button>
+            </section>
+        </section>
+    </main>
     <section>
         <footer>
-            Entrega: WEB-01 | Grupo: <span id="grupo"></span> | Código: <span id="codigo"></span>
+            <p>Entrega: WEB-01 | Grupo: <span id="grupo"></span> | Código: <span id="codigo"></span></p>
         </footer>
     </section>
     <script src="app.js"></script>
