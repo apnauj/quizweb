@@ -29,3 +29,5 @@ Este proyecto es una aplicación web interactiva desarrollada para la entrega **
 ├── index.html   # Estructura principal y carga de scripts
 ├── styles.css   # Estilos visuales de la aplicación
 └── app.js       # Lógica y manipulación del DOM
+
+Readme by: Gemini 
