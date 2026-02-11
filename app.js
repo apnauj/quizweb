@@ -11,6 +11,8 @@ grupo.textContent = "sc01";
 codigo.textContent = "1114153850";
 
 let click = 0;
+let clicks = [0,0,0,0];
+
 $("#msg").textContent = click;
 
 btnClick.addEventListener("click",(e)=>{
@@ -25,14 +27,22 @@ btnReiniciar.addEventListener("click",(e)=>{
 
 function addClick(){
     click++;
-    console.log(click);
+    clicks.push(click);
 }
 
 function render(){
     $("#msg").textContent = click;
+    let i=0;
+    console.log("Los últimos 5 clicks son: ");
+    while(i < 5){
+        console.log(clicks[clicks.length - i - 1]);
+        i++;
+    }
 }
 
 function resetAll(){
     click = 0;
+    clicks = [0,0,0,0,0];
     render();
 }
+
