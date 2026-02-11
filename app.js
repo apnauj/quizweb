@@ -11,7 +11,7 @@ grupo.textContent = "sc01";
 codigo.textContent = "1114153850";
 
 let click = 0;
-let clicks = [0,0,0,0];
+let clicks = [];
 
 $("#msg").textContent = click;
 
@@ -32,17 +32,27 @@ function addClick(){
 
 function render(){
     $("#msg").textContent = click;
-    let i=0;
-    console.log("Los últimos 5 clicks son: ");
-    while(i < 5){
-        console.log(clicks[clicks.length - i - 1]);
-        i++;
+    const listaUI = $("#items");
+
+    listaUI.innerHTML ="";
+
+    let inicio = clicks.length - 5;
+
+    if(inicio < 0){
+        inicio = 0;
     }
+
+    for(let i = inicio; i <clicks.length; i++){
+        const li = document.createElement("li");
+        li.textContent = "Click número: " + clicks[i];
+        listaUI.appendChild(li);
+    }
+
 }
 
 function resetAll(){
     click = 0;
-    clicks = [0,0,0,0,0];
+    clicks = [];
     render();
 }
 
